@@ -30,7 +30,7 @@ with tf.device('/gpu:0'):
 
 	model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-	model.fit(x, y, epochs=20)
+	model.fit(x, y, epochs=10)
 
 	# Importing the testing dataset
 	x = pickle.load(open("x_test.pickle", "rb"))
@@ -49,6 +49,3 @@ with tf.device('/gpu:0'):
 			print("saved")
 		else:
 			print("not saving")
-
-# 0.3324086368083954 loss
-# 0.8933333158493042 acc
